@@ -1,3 +1,8 @@
+:root{
+    --width-page: 1200px;
+    --nav-height: 120px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,4 +12,35 @@ body{
     background-image: url(../img/fondo.webp);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+header{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.main_nav{
+    max-width: var(--width-page);
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    height: var(--nav-height);
+    align-items: center;
+}
+
+.div__izquierdo{
+
+}
+
+.div__derecho .menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu__item a{
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
 }
