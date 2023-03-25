@@ -4,5 +4,7 @@
 }
 
 body{
-    background-color: red;
+    background-image: url(../img/fondo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
