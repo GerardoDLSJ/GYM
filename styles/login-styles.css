@@ -66,27 +66,82 @@ header{
     width: 25rem;
     height: 25rem;
     background-color: rgba(0, 0, 0, 0.5);
+}
+.container{
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
 }
 
-.parte_derecha .containerLogin .title > p{
+.container > div{
+    width: 18rem;
+    margin-top: 2rem;
+}
+
+.container div > p{
+    text-align: center;
+}
+.container .title > p{
     font-family: 'Anton', sans-serif;
     color: #f9ef23;
     font-size: 2.5rem;
-    margin-bottom: 3.rem;
 }
+
+.input_login{
+    position: relative;
+    display: inline-block;
+}
+
 input::placeholder {
     color: white; /* Establece el color del placeholder */
   }
-.containerLogin div > input{
-    margin-top: 2rem;
-    background-color: transparent;
-    color: white;
-    border: none;
-    outline: none;
+
+.input_login > input{
     width: 100%;
     padding: 10px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
     border-bottom: 0.2rem solid #ccc;
 }
 
+.input_login .bi {
+    position: absolute;
+    top: 50%;
+    right: 1px; /* posiciona el icono en el lado derecho */
+    transform: translateY(-50%);
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    color: white;
+}
+
+.container div > a{
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container .botonnIniciarSesion{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.botonnIniciarSesion{
+    color: white;
+    background-color: #e81616;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.botonnIniciarSesion:hover,
+.botonnIniciarSesion:focus,
+.botonnIniciarSesion:active {
+  background-color: #e81616eb;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
