@@ -1,3 +1,8 @@
+:root{
+    --width-page: 1200px;
+    --nav-height: 120px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,3 +13,77 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*--------------------------------------------------------------
+# Encabezado
+--------------------------------------------------------------*/
+header{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.principal_bg-image{
+    
+}
+
+.main_nav{
+    max-width: var(--width-page);
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    height: var(--nav-height);
+    align-items: center;
+}
+
+.div__izquierdo{
+
+}
+
+.div__derecho .menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu__item a{
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button_login{
+    color: white;
+    background-color: #3468DA;
+    text-align: center;
+    border-radius: 999px;
+}
+
+.button_login:hover,
+.button_login:focus,
+.button_login:active {
+  background-color: #0062cc;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*--------------------------------------------------------------
+# Sobre nosotros
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Lo que ofrecemos
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Horarios
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Productos
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Ponte en contacto
+--------------------------------------------------------------*/

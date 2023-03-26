@@ -1,0 +1,147 @@
+:root{
+    --width-page: 1200px;
+    --nav-height: 120px;
+}
+@font-face {
+    font-family: 'HKGrotesk-Medium';
+    src: url('../fonts/HKGrotesk-Medium.otf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../img/fondo_login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*--------------------------------------------------------------
+# Encabezado
+--------------------------------------------------------------*/
+header{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.main_nav{
+    max-width: var(--width-page);
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    height: var(--nav-height);
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
+
+.parte_izquierda{
+    margin-top: 10rem;
+    margin-left: 5rem;
+    width: 50rem;
+    margin-right: 2rem;
+}
+
+.parte_izquierda > h1{
+    font-family: 'Anton', sans-serif;
+    color: #f9ef23;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.parte_izquierda > p{
+    font-family: 'HKGrotesk-Medium', sans-serif;
+    color: white;
+    line-height: 1.9;
+}
+
+.parte_derecha{
+    margin-top: 8rem;
+    width: 25rem;
+    height: 25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.container{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.container > div{
+    width: 18rem;
+    margin-top: 2rem;
+}
+
+.container div > p{
+    text-align: center;
+}
+.container .title > p{
+    font-family: 'Anton', sans-serif;
+    color: #f9ef23;
+    font-size: 2.5rem;
+}
+
+.input_login{
+    position: relative;
+    display: inline-block;
+}
+
+input::placeholder {
+    color: white; /* Establece el color del placeholder */
+  }
+
+.input_login > input{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 0.2rem solid #ccc;
+}
+
+.input_login .bi {
+    position: absolute;
+    top: 50%;
+    right: 1px; /* posiciona el icono en el lado derecho */
+    transform: translateY(-50%);
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    color: white;
+}
+
+.container div > a{
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container .botonnIniciarSesion{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.botonnIniciarSesion{
+    color: white;
+    background-color: #e81616;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.botonnIniciarSesion:hover,
+.botonnIniciarSesion:focus,
+.botonnIniciarSesion:active {
+  background-color: #e81616eb;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
