@@ -221,10 +221,6 @@ header{
     background-image: url('../img/services-3.jpg');
 }
 
-.servicios:nth-child(3) p{
-    color: #ff0000 ;
-}
-
 
 /*--------------------------------------------------------------
 # Horarios
