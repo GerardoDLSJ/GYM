@@ -1,6 +1,10 @@
 :root{
     --width-page: 1200px;
-    --nav-height: 120px;
+    --nav-height: 100px;
+    --color-bg: #0f0f0f;
+    --primary-color: #fff311;
+    --primary-font: 'Anton', sans-serif;
+    --secondary-font: 'Hanken Grotesk', sans-serif;
 }
 
 *{
@@ -9,9 +13,14 @@
 }
 
 body{
-    background-image: url(../img/fondo.webp);
+
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--color-bg);
+}
+
+h2{
+    font-family: var(--primary-font);
 }
 
 /*--------------------------------------------------------------
@@ -21,10 +30,13 @@ header{
     background-color: black;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    min-width: 100%;
 }
 
 .principal_bg-image{
-    
+
 }
 
 .main_nav{
@@ -47,7 +59,7 @@ header{
 
 .menu__item a{
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: white;
     font-family: 'Open Sans', sans-serif;
@@ -69,12 +81,150 @@ header{
 }
 
 /*--------------------------------------------------------------
+# Carrusel
+--------------------------------------------------------------*/
+.carrusel{
+    min-width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/fondo.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
+}
+/*--------------------------------------------------------------
 # Sobre nosotros
 --------------------------------------------------------------*/
+.aboutus{
+    min-width: 100vh;
+    min-height: 100vh;
+    display: flex;
+}
+
+.aboutus_informacion{
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  
+    padding: 100px 100px 100px 100px;  
+}
+
+.aboutus_informacion h2{
+    color: var(--primary-color);
+    font-size: 4.1rem;
+    text-transform: uppercase;
+    margin-bottom: .9rem;
+    font-style: italic;
+    letter-spacing: 0.2rem;
+    line-height: 5rem;
+
+}
+
+.aboutus_informacion p{
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: justify;
+    font-family: var(--secondary-font);
+}
+
+.aboutus_imagenes{
+    width: 50%;
+    padding-top: 6vh;
+    gap: 1rem;
+    margin-left: 0px;
+}
+
+.aboutus_imagenes div {
+   display: flex;
+   max-width: 100%;
+   gap: 3rem;
+}
+
+
+.aboutus_imagenes img{
+    width: 295px;
+    height: 445px;
+}
+
+.aboutus_imagenes div img:nth-child(2){
+    margin-top: 7.3rem;
+}
+
+
 
 /*--------------------------------------------------------------
 # Lo que ofrecemos
 --------------------------------------------------------------*/
+.whatweoffer{
+    min-width: 100vh;
+    min-height: 100vh;
+}
+
+.whatweoffer-titulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.whatweoffer-titulos h2{
+    color: var(--primary-color);
+    font-family: var(--primary-font); 
+    font-size: 3.1rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.whatweoffer-titulos p{
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+    font-weight: 800;
+}
+
+.whatweoffer-servicios{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 5% 10%  ;
+    gap: 3rem;
+}
+
+.servicios{
+    min-width: 33%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.servicios p{
+    color: #fff;
+    font-family: var(--primary-font);
+    font-weight: 800;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+.servicios:nth-child(1){
+    background-image: url('../img/services-1.jpg');
+}
+.servicios:nth-child(2){
+    background-image: url('../img/services-2.jpg');
+}
+.servicios:nth-child(3){
+    background-image: url('../img/services-3.jpg');
+}
+
+.servicios:nth-child(3) p{
+    color: #ff0000 ;
+}
+
 
 /*--------------------------------------------------------------
 # Horarios

@@ -9,9 +9,10 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
-
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@500&display=swap" rel="stylesheet">
       <!-- Apunta al directorio css -->
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <!--Encabezado-->
@@ -19,7 +20,7 @@
         <!--Main nav-->
         <nav class="main_nav">
             <div class="div__izquierdo">
-                <img src="img/logo.svg">
+                <img src="../img/logo.svg">
             </div>
             <div class="div__derecho">
                 <ul class="menu">
@@ -47,20 +48,54 @@
     </div>
 
     <!--Inicio del main-->
-    <main>        
+    <main>      
+        
+        <!-- ======= Sección Carrusel ======= -->
+        <section id="sec_1" class="carrusel">
+            <p>HOLA</p>
+        </section>
+
         <!-- ======= Sección sobre nosotros ======= -->
         <section id="serc_1" class="aboutus">
+            <div class="aboutus_informacion">
+                <h2>Sobre<br/>Nosotros...</h2>
+                <p>Entrenar con los mejores expertos en el campo de la construcción corporal. Sus resultados se hablarán a sí mismos. Pruebe las últimas tendencias de ejercicio, equipos innovadores y planes especiales de nutrición.
+                </p>
+            </div>
+            <div class="aboutus_imagenes">
+                
+                <div>
+                    <img src="../img/training-aboutus-1.jpg" alt="Persona entrenando">
+    
+                    <img src="../img/training-aboutus-2.jpg" alt="Persona entrenando">
 
+                </div>
+        
+            </div>
         </section>
 
         <!-- ======= Sección lo que ofrecemos ======= -->
         <section id="serc_2" class="whatweoffer">
-
+            <div class="whatweoffer-titulos">
+                <h2>Lo que ofrecemos</h2>
+                <p>Estamos comprometidos a brindarte la mejor experiencia de entrenamiento.</p>
+            </div>
+            <div class="whatweoffer-servicios">
+                <div class="servicios">
+                    <p>Equipo de calidad</p>
+                </div>
+                <div class="servicios">
+                    <p>Plan de Entrenamiento</p>
+                </div>
+                <div class="servicios">
+                    <p>Morras chidas</p>
+                </div>
+            </div>
         </section>
 
         <!-- ======= Sección horarios ======= -->
         <section id="serc_3" class="schedules">
-
+            
         </section>
 
         <!-- ======= Sección productos ======= -->
@@ -73,5 +108,6 @@
 
         </section>
     </main>
+    <script src="/app.js"></script>
 </body>
 </html>
