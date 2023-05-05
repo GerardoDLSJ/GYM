@@ -225,7 +225,46 @@ header{
 /*--------------------------------------------------------------
 # Horarios
 --------------------------------------------------------------*/
+.schedules{
+    min-width: 100vh;
+    min-height: 100vh;
+    background-image: url(../img/shedules.jpg);
+}
 
+.schedules__titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.schedules__titulo h2{
+    margin-top: 10rem;
+    color: var(--primary-color);
+    font-family: var(--primary-font); 
+    font-size: 3.1rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.schedules__titulo h3{
+    margin-top: 3rem;
+    margin-right: 12rem;
+    color: white;
+    font-size: 2.3rem;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.schedules__titulo p{
+    margin-top: 1rem;
+    margin-left: 12rem;
+    color: white;
+    font-size: 1.8rem;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+}
 /*--------------------------------------------------------------
 # Productos
 --------------------------------------------------------------*/
