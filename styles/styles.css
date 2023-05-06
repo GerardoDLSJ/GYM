@@ -343,7 +343,7 @@ header{
 }
 
 .products__titulo h2{
-    margin-top: 8rem;
+    margin-top: 5rem;
     color: var(--primary-color);
     font-family: var(--primary-font); 
     font-size: 4.1rem;
@@ -395,4 +395,56 @@ header{
     font-family: var(--primary-font); 
     font-style: italic;
     font-size: 4rem;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact{
+    min-width: 100vh;
+    min-height: 100vh;
+    background: url(../img/contact.png);
+    display: flex; 
+    flex-direction: column;
+}
+
+.contact__titulo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__titulo h2{
+    margin-top: 12rem;
+    margin-left: 5rem;
+    color: var(--primary-color);
+    font-family: var(--primary-font); 
+    font-size: 4.1rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.contact__informacion{
+    background-color: var(--primary-color);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contact__bloques{
+    padding: 3rem 4rem;
+    margin-top: auto;
+}
+
+.contact__bloques h3{
+    color: black;
+    font-family: var(--primary-font); 
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.contact__bloques p{
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
 }
