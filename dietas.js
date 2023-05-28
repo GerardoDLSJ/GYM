@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function obtenerComidas(tipoDieta, plazoDieta, calorias) {
     const url = `https://api.spoonacular.com/mealplanner/generate?apiKey=${api}&&timeFrame=${plazoDieta}&&targetcalories=${calorias}&&diet=${tipoDieta}`;
-    console.log(url);
 
     await fetch(url)
       .then((resultado) => resultado.json())
@@ -69,29 +68,32 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
+  // MOSTRAR DIETA SEMANAL
   function mostrarDietaSemanal(respuesta = {}) {
     limpiarHTML(resultado);
 
+    const btnDescargar = document.createElement("button");
+    btnDescargar.innerHTML = `<i class="fa-solid fa-file-pdf"></i>
+                            Descargar PDF`;
+    btnDescargar.classList.add("btn", "btn-danger");
+
     const tabla = document.createElement("TABLE");
+    tabla.classList.add("table", "table-bordered", "border-warning");
+
     const tbody = document.createElement("tbody");
-    tabla.classList.add(
-      "table",
-      "table-bordered",
-      "border-success-subtle",
-      ".table-hover",
-      "mt-5"
-    );
-    tabla.innerHTML = `<thead>
-                                <th class="text-center">Día</th>
-                                <th class="text-center">Almuerzo</th>
-                                <th class="text-center">Comida</th>
-                                <th class="text-center">Cena</th>
-                                <th class="text-center">Total Calorias</th>
+
+    tbody.classList.add("cuerpo-tabla");
+
+    tabla.innerHTML = `<thead class="encabezado">
+                                <th class="text-center">DÍA</th>
+                                <th class="text-center">ALMUERZO</th>
+                                <th class="text-center">COMIDA</th>
+                                <th class="text-center">CENA</th>
+                                <th class="text-center">TOTAL CALORÍAS</th>
                                
                           </thead>
                           `;
     for (const day in respuesta) {
-      console.log(respuesta[day]);
       const { meals, nutrients } = respuesta[day];
       const [comidaMañana, comidaTarde, comidaCena] = meals;
       const { calories } = nutrients;
@@ -123,28 +125,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
       tabla.appendChild(tbody);
     }
-
+    resultado.appendChild(btnDescargar);
     resultado.appendChild(tabla);
+    btnDescargar.addEventListener("click", () => descargarPDF("Semanal"));
   }
+
+  // MOSTRAR COMIDAS DE UN SOLO DIA
   function mostrarDietaDia({ meals, nutrients }) {
     limpiarHTML(resultado);
     const tabla = document.createElement("TABLE");
     const tbody = document.createElement("tbody");
-    tabla.classList.add(
-      "table",
-      "table-bordered",
-      "border-success-subtle",
-      ".table-hover",
-      "mt-5"
-    );
-    tabla.innerHTML = `<thead>
+    tbody.classList.add("cuerpo-tabla");
+    tabla.classList.add("table", "table-bordered");
+
+    const btnDescargar = document.createElement("button");
+    btnDescargar.innerHTML = `<i class="fa-solid fa-file-pdf"></i>
+                            Descargar PDF`;
+    btnDescargar.classList.add("btn", "btn-danger");
+
+    tabla.innerHTML = `<thead class="encabezado">
                                 <th class="text-center"></th>
                                 <th class="text-center">Almuerzo</th>
                                 <th class="text-center">Comida</th>
                                 <th class="text-center">Cena</th>
                                 <th class="text-center">Total Calorias</th>
                                
-                          </thead>
+                      </thead>
         `;
     console.log(meals);
     console.log(nutrients);
@@ -176,13 +182,24 @@ document.addEventListener("DOMContentLoaded", () => {
     tbody.appendChild(tr);
 
     tabla.appendChild(tbody);
-
+    resultado.appendChild(btnDescargar);
     resultado.appendChild(tabla);
+
+    btnDescargar.addEventListener("click", () => descargarPDF("Dia"));
   }
 
   function limpiarHTML(elemento) {
     while (elemento.firstChild) {
       elemento.removeChild(elemento.firstChild);
     }
+  }
+
+  function descargarPDF(tipo) {
+    const tabla = document.querySelector(".table");
+    console.log(tabla);
+    var opt = {
+      filename: `Dieta_${tipo}_Generada.pdf`,
+    };
+    html2pdf().set(opt).from(tabla).save();
   }
 });

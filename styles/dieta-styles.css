@@ -1,14 +1,40 @@
+
+
 .centrar{
     margin: 1rem auto;
 }
 
-
-.contenedor-form{
-    background-color: #8ff6c1;
-    max-width: 500px;
-    padding: 3rem;
+.titulo-dietas{
+    color: #f9ef23;
+    font-family: 'Open Sans',sans-serif;
+    margin-top: 7rem;
 }
 
 
 
 
+.contenedor-form{
+    background-color: #96989727;
+    max-width: 500px;
+    padding: 3rem;
+    color: white;
+}
+
+table{
+    margin-top: 10px !important;
+}
+
+
+.encabezado{
+    color: #f9ef23;
+    background-color: #3a3b3d;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.cuerpo-tabla{
+    color: white;
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}

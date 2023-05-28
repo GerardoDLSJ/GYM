@@ -1,0 +1,21 @@
+
+
+
+.menu-izq-list{
+    list-style: none;
+    color: white;
+}
+
+.menu-izq-item a{
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-family: 1rem;
+    text-decoration: none;
+
+}
+
+.menu-izq-item a:hover{
+
+    color: #f9ef23;
+
+}

@@ -54,7 +54,12 @@ header{
 }
 
 .div__izquierdo{
+    display: flex;
+}
 
+.div__derecho{
+    display: flex;
+    gap: 1rem;
 }
 
 .div__derecho .menu{
@@ -68,6 +73,10 @@ header{
     text-decoration: none;
     color: white;
     font-family: 'Open Sans', sans-serif;
+}
+
+.menu__item a:hover{
+    color: #fff311;
 }
 
 .button_login{
@@ -84,6 +93,32 @@ header{
   outline: none;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
+
+.main-nav__search, .main-nav__search form{
+    height: 100%;
+    margin-left: auto;
+}
+
+.main-nav__search form {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.main-nav__search input {
+    min-width: 400px;
+    padding: 0.1rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+input[type="search"]:focus {
+    background-color: transparent;
+  }
+
 
 /*--------------------------------------------------------------
 # Carrusel
