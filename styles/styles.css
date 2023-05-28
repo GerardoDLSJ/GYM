@@ -12,11 +12,16 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
 
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--color-bg);
+
 }
 
 h2{

@@ -1,0 +1,254 @@
+@font-face {
+    font-family: 'HKGrotesk-Light';
+    src: url('../fonts/HKGrotesk-Light.otf') format('truetype');
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+  }
+  
+  *,
+  *:after,
+  *:before {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    background-color: #151313;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .centrado {
+    text-align: center;
+  }
+  
+  .oculto {
+    display: none;
+  }
+  
+  .no-menu.pagina .sidebar {
+    margin-left: -20rem;
+  }
+  
+  .pagina {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+  }
+  .header .nombre-sitio {
+    flex: 0 0 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: black;
+  }
+  .header .nombre-sitio img{
+    max-width: 200px;
+    max-height: 200px;
+
+  }
+  @media only screen and (min-width: 1024px) {
+    .header .nombre-sitio {
+      flex: 0 0 20rem;
+    }
+  }
+  .header .nombre-sitio h1 {
+    color: #FFFFFF;
+    margin: 0;
+  }
+  .header .nombre-sitio .escritorio {
+    display: none;
+  }
+  @media only screen and (min-width: 1024px) {
+    .header .nombre-sitio .escritorio {
+      display: block;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .header .nombre-sitio .movil {
+      display: none;
+    }
+  }
+  
+  .barra {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background-color: black;
+  }
+  .barra .menu-izquierdo {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  .barra .menu-izquierdo i {
+    color: #FFFFFF;
+    font-size: 1.6rem;
+  }
+  .barra .menu-izquierdo .fa-arrow-right {
+    display: none;
+  }
+  .barra .menu-derecho {
+    display: flex;
+  }
+  .barra .menu-derecho .caja {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .barra .menu-derecho .caja button{
+    font-weight: 800;
+
+  }
+
+  
+  /* MENU */
+
+  .sidebar {
+    background-color: #373737;
+    flex: 0 0 20rem;
+    padding: 1rem;
+    color: #FFFFFF;
+    transition: margin-left 0.3s ease;
+  }
+  .sidebar .usuario {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.3rem;
+    font-weight: normal;
+  }
+  .sidebar .usuario img {
+    max-width: 4rem;
+  }
+
+  .sidebar .usuario p{
+    padding-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .sidebar .usuario span {
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+  }
+
+  .sidebar .menu-admin {
+    margin-top: 2rem;
+  }
+  
+  .menu-admin h2{
+    padding-left: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .menu-admin .menu {
+    list-style: none;
+    padding: 0 0 0 1rem;
+  }
+  .menu-admin .menu > li {
+    padding: 0.5rem;
+  }
+  .menu-admin .menu > li:hover ul {
+    visibility: visible;
+  }
+  .menu-admin .menu > li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    transition: padding-left 0.3s ease;
+  }
+  .menu-admin .menu > li a:hover {
+    background-color: #005b9f;
+    padding-left: 2rem;
+  }
+  .menu-admin .menu > li ul {
+    visibility: hidden;
+    margin-top: 1rem;
+    list-style: none;
+    background-color: #2f2f2f;
+    padding: 1rem;
+  }
+  .menu-admin .menu > li ul li {
+    margin-bottom: 1rem;
+  }
+  .menu-admin .menu > li ul li:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .contenedor-principal {
+    flex: 1;
+    display: flex;
+  }
+  
+  .contenido {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  
+  /* FORMULARIOS */
+
+  .formulario{
+    margin: 0 auto;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+  }
+
+  .formulario h2{
+    color: #f9ef23;
+    font-family: 'Anton',sans-serif;
+    font-weight: bold;
+    font-size: 2.3rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+  .formulario input{
+    margin: 0 auto;
+  }
+  .formulario .formulario-campo{
+    
+    background-color: #151313;
+    border: none;
+    border-bottom: 3px solid white;
+    color: white;
+    width: 50%;
+    font-family: 'HKGrotesk-Light';
+    font-weight: 700;
+  } 
+
+
+  
+
+  .formulario  .formulario-campo::placeholder{
+    color: rgb(255, 255, 255);
+  }
+
+   .formulario .formulario-campo:focus{
+    outline: none;
+   }
+
+   .formulario input[type="submit"]{
+    background-color: #3168d9;
+    border-radius: 1rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 30%;
+   }
