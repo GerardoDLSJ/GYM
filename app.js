@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-app.use(cors({ origin: ["http://127.0.0.1", "*"] }));
-
+app.use(cors());
+app.use(express.json());
 const infoSuplemento = require("./suplementos.json");
 
 const puerto = 5000;
@@ -15,17 +15,12 @@ app.get("/", (req, res) => {
 });
 
 // Obtener todos los suplementos
-app.get("/suplementos", cors(), (req, res) => {
-  const jsend = {
-    status: "success",
-    data: infoSuplemento,
-  };
-
-  res.send(jsend);
+app.get("/suplementos", (req, res) => {
+  res.send(infoSuplemento);
 });
 
 // Buscar suplemento por título Ejemplo /suplemento?titulo=elite
-app.get("/suplemento/:title", (req, res) => {
+app.get("/suplemento", (req, res) => {
   const tituloBuscado = req.query.titulo.toLowerCase(); // Buscasr sin importar si es mayuscula o minuscula
   const suplementosEncontrados = infoSuplemento.filter((suplemento) =>
     suplemento.titulo.toLowerCase().includes(tituloBuscado)
@@ -100,6 +95,8 @@ app.get("/suplemento/:id/imagenes", (req, res) => {
 
 // Agregar un nuevo suplemento
 app.post("/suplemento", (req, res) => {
+  console.log("Se realizo una peticion");
+  console.log(req.body);
   const nuevoSuplemento = req.body;
   infoSuplemento.push(nuevoSuplemento);
   res.send("Suplemento agregado correctamente");
