@@ -1,3 +1,4 @@
+const { jsPDF } = window.jspdf;
 document.addEventListener("DOMContentLoaded", () => {
   const api = "baedc6559501461182186ab3c8ebeb46";
   const resultado = document.querySelector("#resultado");
@@ -196,10 +197,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function descargarPDF(tipo) {
     const tabla = document.querySelector(".table");
-    console.log(tabla);
-    var opt = {
-      filename: `Dieta_${tipo}_Generada.pdf`,
-    };
-    html2pdf().set(opt).from(tabla).save();
+    const doc = new jsPDF();
+
+    doc.autoTable({ html: ".table", styles: { halign: "center" } });
+
+    doc.save(`Dieta_${tipo}.pdf`);
   }
 });
