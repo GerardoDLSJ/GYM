@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
+app.use(cors({ origin: ["http://127.0.0.1", "*"] }));
 
 const infoSuplemento = require("./suplementos.json");
 
-const puerto = 3000;
+const puerto = 5000;
 app.listen(puerto, () => {
   console.log(`El servidor esta escuchando en el puerto ${puerto}`);
 });
@@ -13,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 // Obtener todos los suplementos
-app.get("/suplementos", (req, res) => {
+app.get("/suplementos", cors(), (req, res) => {
   const jsend = {
     status: "success",
     data: infoSuplemento,
@@ -23,7 +25,7 @@ app.get("/suplementos", (req, res) => {
 });
 
 // Buscar suplemento por título Ejemplo /suplemento?titulo=elite
-app.get("/suplemento", (req, res) => {
+app.get("/suplemento/:title", (req, res) => {
   const tituloBuscado = req.query.titulo.toLowerCase(); // Buscasr sin importar si es mayuscula o minuscula
   const suplementosEncontrados = infoSuplemento.filter((suplemento) =>
     suplemento.titulo.toLowerCase().includes(tituloBuscado)

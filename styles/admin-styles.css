@@ -69,11 +69,13 @@ html {
   .header .nombre-sitio .escritorio {
     display: none;
   }
+
   @media only screen and (min-width: 1024px) {
     .header .nombre-sitio .escritorio {
       display: block;
     }
   }
+
   @media only screen and (min-width: 1024px) {
     .header .nombre-sitio .movil {
       display: none;
@@ -82,46 +84,18 @@ html {
   
   .barra {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     flex: 1;
     background-color: black;
   }
-  .barra .menu-izquierdo {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-  }
-  .barra .menu-izquierdo i {
-    color: #FFFFFF;
-    font-size: 1.6rem;
-  }
-  .barra .menu-izquierdo .fa-arrow-right {
-    display: none;
-  }
-  .barra .menu-derecho {
-    display: flex;
-  }
-  .barra .menu-derecho .caja {
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-  }
 
-  .barra .menu-derecho .caja button{
-    font-weight: 800;
-
-  }
-
-  
-  /* MENU */
+  /* USER SUPERIOR DERECHA */
 
   .sidebar {
-    background-color: #373737;
-    flex: 0 0 20rem;
-    padding: 1rem;
+    padding: 0rem 1rem;
     color: #FFFFFF;
-    transition: margin-left 0.3s ease;
   }
+  
   .sidebar .usuario {
     display: flex;
     align-items: center;
@@ -134,61 +108,12 @@ html {
   }
 
   .sidebar .usuario p{
-    padding-top: 10px;
+    padding-top: 15px;
     font-size: 1.3rem;
     font-weight: 700;
   }
-  .sidebar .usuario span {
-    font-weight: bold;
-    font-style: italic;
-    display: block;
-  }
-
-  .sidebar .menu-admin {
-    margin-top: 2rem;
-  }
   
-  .menu-admin h2{
-    padding-left: 10px;
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
-
-  .menu-admin .menu {
-    list-style: none;
-    padding: 0 0 0 1rem;
-  }
-  .menu-admin .menu > li {
-    padding: 0.5rem;
-  }
-  .menu-admin .menu > li:hover ul {
-    visibility: visible;
-  }
-  .menu-admin .menu > li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 0.5rem;
-    font-size: 1.3rem;
-    transition: padding-left 0.3s ease;
-  }
-  .menu-admin .menu > li a:hover {
-    background-color: #005b9f;
-    padding-left: 2rem;
-  }
-  .menu-admin .menu > li ul {
-    visibility: hidden;
-    margin-top: 1rem;
-    list-style: none;
-    background-color: #2f2f2f;
-    padding: 1rem;
-  }
-  .menu-admin .menu > li ul li {
-    margin-bottom: 1rem;
-  }
-  .menu-admin .menu > li ul li:last-of-type {
-    margin-bottom: 0;
-  }
-  
+    /* CURPO DE LA PAGINA */
   .contenedor-principal {
     flex: 1;
     display: flex;
@@ -196,7 +121,7 @@ html {
   
   .contenido {
     flex: 1;
-    padding: 2rem;
+    padding: 1rem;
   }
   
   
@@ -233,9 +158,6 @@ html {
     font-weight: 700;
   } 
 
-
-  
-
   .formulario  .formulario-campo::placeholder{
     color: rgb(255, 255, 255);
   }
@@ -252,3 +174,82 @@ html {
     font-size: 1.2rem;
     width: 30%;
    }
+
+         /* Barra de busqueda */
+.main-nav__search, .main-nav__search form{
+  height: 100%;
+  margin-left: auto;
+}
+
+.main-nav__search form {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.main-nav__search input {
+  min-width: 400px;
+  padding: 0.1rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+input[type="search"]:focus {
+  background-color: transparent;
+}
+
+.sub-nav{
+  flex: 1;
+  display: flex;
+}
+
+.sub-nav h2{
+  color: #f9ef23;
+  font-family: 'Anton',sans-serif;
+}
+
+         /* TABLA*/
+ .table thead{
+  background-color: rgb(39, 39, 39);
+  color:  #f9ef23;
+ }
+
+ .container .btn{
+  color: #FFFFFF;
+  font-weight: 900;
+ }
+
+   /* MODAL AÑADIR*/
+   .title-estilo{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family: 'Anton',sans-serif;
+    color:  #f9ef23;
+   }
+   
+  .estilo{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+  }
+
+  .form-control{
+    color: #FFFFFF;
+    background-color: transparent;
+  }
+  .modal-footer{
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .btnGuardarEstilo{
+    width: 100%;
+    border-radius: 1.5rem;
+    font-weight: 900;
+  }
+
+  .btnEditar{
+    margin: 1rem;
+  }
