@@ -63,22 +63,23 @@
                 <h2>PRODUCTOS TOTALES</h2>
                 <div class="main-nav__search">
                   <form action="#" id="main-search">
-                    <input  type="search" name="search" placeholder= "&#xe8b6;&nbsp; Buscar suplemento" style="font-family:'Ubuntu', sans-serif, 'Material Symbols Outlined'"autocomplete="off"/>
-                    <input type="submit" hidden />
+                    <input class="light-table-filter" data-table="table_id" type="text" placeholder= "&#xe8b6;&nbsp; Buscar suplemento" style="font-family:'Ubuntu', sans-serif, 'Material Symbols Outlined'"autocomplete="off"/>
+                    <a href="index.html" id="btnSalir" type="button" class="btn btn-warning" style="margin-left: 1rem;" >Cerrar sesion</a>
                   </form>
                 </div>
               </div>
               <!-- EN ES LA TABLE DE PRODUCTOS -->
               <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
                 <button id="btnCrear" type="button" class="btn btn-success" data-bs-toggle="modal" >Añadir</button>
-                <table id="tablaArticulos" class="table mt-2 table-bordered table-striped">
+                <table id="tablaArticulos" class="table mt-2 table-bordered table-striped table_id">
                   <thead>
                     <tr class="text-center">
                       <th>N°</th>
                       <th>IMAGEN</th>
                       <th>NOMBRE</th>
+                      <th>DESCRIPCION</th>
                       <th>COSTO</th>
-                      <th>FUNCION</th>
+                      <th>ACCION</th>
                     </tr>
                   </thead>
                   <Tbody>

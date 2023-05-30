@@ -1,8 +1,8 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "titulo": "Peace and Love Protein Proteina Vegana 4.5lbs Cacao Matcha",
-        "precio": "$890.00",
+        "precio": "890",
         "descripcion": "Peace and Love Protein La Proteína Vegana Definitiva, Surge de la Combinación Perfecta de  3 Distintas Fuentes: Amaranto, Arroz y Chícharo. Ideal para Todos Aquellos que Buscan Aumentar Masa Muscular, Pérdida de Grasa, Mejorar su Rendimiento o Simplemente Llevar un Estilo de Vida Más Saludable.",
         "image": [
             "https://www.suplementosmexico.com.mx/2525-superlarge_default/peace-and-love-protein-proteina-vegana-45lbs-cacao-matcha.jpg",
@@ -10,9 +10,9 @@
         ]
     },
     {
-        "id": 1,
+        "id": 2,
         "titulo": "Peace and Love Protein Proteina Vegana 4.5lbs Frappe Caramel",
-        "precio": "$890.00",
+        "precio": "890",
         "descripcion": "Peace and Love Protein La Proteína Vegana Definitiva, Surge de la Combinación Perfecta de  3 Distintas Fuentes: Amaranto, Arroz y Chícharo. Ideal para Todos Aquellos que Buscan Aumentar Masa Muscular, Pérdida de Grasa, Mejorar su Rendimiento o Simplemente Llevar un Estilo de Vida Más Saludable.",
         "image": [
             "https://www.suplementosmexico.com.mx/2527-superlarge_default/peace-and-love-protein-proteina-vegana-45lbs-frappe-caramel.jpg",
@@ -20,9 +20,9 @@
         ]
     },
     {
-        "id": 2,
+        "id": 3,
         "titulo": "Gold Star Whey Protein 5lbs de Army Nutrition sabor Snickers",
-        "precio": "$980.00",
+        "precio": "980",
         "descripcion": "Whey Gold Star 5lbs de Army Nutrition es 100% proteina de suero de leche hidrolizada adicionada con glutamina, bcaas y enzimas digestivas, viene en increibles sabores como snikers",
         "image": [
             "https://www.suplementosmexico.com.mx/1955-superlarge_default/gold-star-whey-protein-5lbs-de-army-nutrition-sabor-snickers.jpg",
@@ -31,9 +31,9 @@
         ]
     },
     {
-        "id": 3,
+        "id": 4,
         "titulo": "Shining Protein 4lbs Vainilla - Canela Proteina para Mujer",
-        "precio": "$980.00",
+        "precio": "980",
         "descripcion": "Army Nutrition ha desarrollado la nueva Shining Protein, proteína para mujer. Shining Protein tiene un perfil de aminoácidos y cantidad de proteína (25gr por toma) ideales para la mujer deportista que desea obtener ganancias totalmente magras por lo que es totalmente cero carbohidratos, cero grasa y cero lactosa.",
         "image": [
             "https://www.suplementosmexico.com.mx/2058-superlarge_default/shining-protein-4lbs-vainilla-canela-proteina-para-mujer.jpg",
@@ -41,9 +41,9 @@
         ]
     },
     {
-        "id": 4,
+        "id": 5,
         "titulo": "Shining Protein 4lbs Chocolate Avellana Proteina para Mujer",
-        "precio": "$980.00",
+        "precio": "980",
         "descripcion": "Army Nutrition ha desarrollado la nueva Shining Protein, proteína para mujer. Shining Protein tiene un perfil de aminoácidos y cantidad de proteína (25gr por toma) ideales para la mujer deportista que desea obtener ganancias totalmente magras por lo que es totalmente cero carbohidratos, cero grasa y cero lactosa.",
         "image": [
             "https://www.suplementosmexico.com.mx/2059-superlarge_default/shining-protein-4lbs-chocolate-avellana-proteina-para-mujer.jpg",
@@ -51,9 +51,9 @@
         ]
     },
     {
-        "id": 5,
+        "id": 6,
         "titulo": "Zero Ripped Protein 4lbs de Army Nutrition sabor Ferrero",
-        "precio": "$1,450.00",
+        "precio": "1450",
         "descripcion": "Iso Zero Ripped es 100% aislado de suero de leche que es la fuente mas bio asimilable y pura del mercado. Esta totalmente libre de impurezas ya que su fórmula es cero carbohidratos, cero grasa y cero lactosa!!",
         "image": [
             "https://www.suplementosmexico.com.mx/1938-superlarge_default/zero-ripped-protein-4lbs-de-army-nutrition-sabor-ferrero.jpg",
@@ -61,9 +61,9 @@
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         "titulo": "Gold Star Whey Protein 5lbs de Army Nutrition sabor Waffle de Vainilla",
-        "precio": "$980.00",
+        "precio": "980",
         "descripcion": "Whey Gold Star 5lbs de Army Nutrition es 100% proteina de suero de leche hidrolizada adicionada con glutamina, bcaas y enzimas digestivas, viene en increibles sabores como snikers",
         "image": [
             "https://www.suplementosmexico.com.mx/1656-superlarge_default/gold-star-whey-protein-5lbs-de-army-nutrition.jpg",
@@ -72,9 +72,9 @@
         ]
     },
     {
-        "id": 7,
+        "id": 8,
         "titulo": "Galleta Skulls Protein 1 paquete con 2 galletas",
-        "precio": "$60.00",
+        "precio": "600",
         "descripcion": "Skulls Galletas de Proteína Caja de 20 galletas Las Galletas de proteína de Skulls Nutrition son una verdadera delicia en cualquiera de sus diferentes sabores",
         "image": [
             "https://www.suplementosmexico.com.mx/2666-superlarge_default/galleta-skulls-protein-1-paquete-con-2-galletas.jpg",
@@ -82,9 +82,9 @@
         ]
     },
     {
-        "id": 8,
+        "id": 9,
         "titulo": "HYDRO WHEY + HMB",
-        "precio": "$1,050.00",
+        "precio": "1050",
         "descripcion": "El Lado Oscuro pone directamente en tus manos su más reciente creación, Hydro Whey + HMB, Proteína de la más alta calidad, SIN Carbohidratos, enfocada en brindarle los nutrientes necesarios a tu cuerpo para un correcto mantenimiento y aumento de masa muscular.",
         "image": [
             "https://www.suplementosmexico.com.mx/2621-superlarge_default/hydro-whey-hmb-.jpg",
@@ -94,9 +94,9 @@
         ]
     },
     {
-        "id": 9,
+        "id": 10,
         "titulo": "Nuclear Hydro Zero 12lbs con Stenabolic",
-        "precio": "$1,649.00",
+        "precio": "1649",
         "descripcion": "Hydro Zero Combina el Más Potente Quemador del Mercado Stenabolic con Proteína Hidrolizada de la más Alta Calidad El Primer Suplemento Capaz de Llevar tu Cuerpo a un Estado de Quema de Grasas Constante y Ganancias Musculares Magras",
         "image": [
             "https://www.suplementosmexico.com.mx/2453-superlarge_default/nuclear-hydro-zero-12lbs-con-stenabolic.jpg",
@@ -104,9 +104,9 @@
         ]
     },
     {
-        "id": 10,
+        "id": 11,
         "titulo": "Hydro Zero 2.2lbs Cero Carbohidratos de Adictos al Gym",
-        "precio": "$390.00",
+        "precio": "390",
         "descripcion": "Proteína Hydro Zero 2.2lbs Cero Carbohidratos de Adictos al Gym es para quienes Buscan Ganancias de Verdad, para quienes desean el Aporte más Limpio de Proteína en esas Etapas de Definición, para quienes les Gusta Subir Magros, para todos esos Adictos al Gym.",
         "image": [
             "https://www.suplementosmexico.com.mx/2593-superlarge_default/hydro-zero-22lbs-cero-carbohidratos-de-adictos-al-gym.jpg",
@@ -114,9 +114,9 @@
         ]
     },
     {
-        "id": 11,
+        "id": 12,
         "titulo": "Myo Kaiosama Whey 5lbs Proteina Dragon Ball",
-        "precio": "$910.00",
+        "precio": "910",
         "descripcion": "Myo Kaiosama Whey 5lbs Proteina Dragon Ball es la proteína de más elevada calidad. Es una fuente rica en aminoácidos de cadena ramificada (BCAA) y se absorbe por el organismo más rápidamente que las restantes proteínas.",
         "image": [
             "https://www.suplementosmexico.com.mx/2312-superlarge_default/myo-kaiosama-whey-5lbs-proteina-dragon-ball.jpg",
@@ -124,9 +124,9 @@
         ]
     },
     {
-        "id": 12,
+        "id": 13,
         "titulo": "Proteina XT de Puro Campeon 4lbs",
-        "precio": "$680.00",
+        "precio": "680",
         "descripcion": "La proteína XT de puro campeon es de liberación extendida y esta diseñada como lo ultimo en combustible muscular y formula de recuperación.",
         "image": [
             "https://www.suplementosmexico.com.mx/262-superlarge_default/proteina-xt-de-puro-campeon-4lbs.jpg",
@@ -134,9 +134,9 @@
         ]
     },
     {
-        "id": 13,
+        "id": 14,
         "titulo": "Gold Star Whey Protein 5lbs de Army Nutrition sabor Frutos Rojos",
-        "precio": "$980.00",
+        "precio": "980",
         "descripcion": "Whey Gold Star 5lbs de Army Nutrition es 100% proteina de suero de leche hidrolizada adicionada con glutamina, bcaas y enzimas digestivas, viene en increibles sabores como snikers",
         "image": [
             "https://www.suplementosmexico.com.mx/1947-superlarge_default/gold-star-whey-protein-5lbs-de-army-nutrition-sabor-frutos-rojos.jpg",
@@ -145,9 +145,9 @@
         ]
     },
     {
-        "id": 14,
+        "id": 15,
         "titulo": "Nitro Tech Pro Series 4 Lb Proteinas Muscletech",
-        "precio": "$1,120.00",
+        "precio": "1120",
         "descripcion": "Después de realizar su pedido, usted ganará 1 punto por compra, el cual puede usar para obtener regalos!",
         "image": [
             "https://www.suplementosmexico.com.mx/147-superlarge_default/nitro-tech-pro-series-4-lb-proteinas-muscletech.jpg",
@@ -155,9 +155,9 @@
         ]
     },
     {
-        "id": 15,
+        "id": 16,
         "titulo": "Iso-100 5LB Proteinas Dymatize",
-        "precio": "$1,999.00",
+        "precio": "1999",
         "descripcion": "Dymatize ISO100 DE DYMATIZE es 100% Aislado de proteína de suero. Muchas marcas dicen que usan aislado de proteínas de suero, pero después de utilizar Dymatize ISO•100 puedes ver, probar y sentir la diferencia al momento.",
         "image": [
             "https://www.suplementosmexico.com.mx/84-superlarge_default/iso-100-5lb-proteinas-dymatize.jpg",
@@ -166,9 +166,9 @@
         ]
     },
     {
-        "id": 16,
+        "id": 17,
         "titulo": "ELITE CASEIN caseina DYMATIZE proteina",
-        "precio": "$1,420.00",
+        "precio": "1420",
         "descripcion": "Después de realizar su pedido, usted ganará 1 punto por compra, el cual puede usar para obtener regalos!",
         "image": [
             "https://www.suplementosmexico.com.mx/771-superlarge_default/elite-casein-caseina-dymatize-proteina.jpg",
@@ -178,9 +178,9 @@
         ]
     },
     {
-        "id": 17,
+        "id": 18,
         "titulo": "Carnivor 4 Lbs PROTEINA MUSCLE MEDS",
-        "precio": "$1,030.00",
+        "precio": "1030",
         "descripcion": "Después de realizar su pedido, usted ganará 1 punto por compra, el cual puede usar para obtener regalos!",
         "image": [
             "https://www.suplementosmexico.com.mx/851-superlarge_default/carnivor-4-lbs-proteina-muscle-meds.jpg",
@@ -188,18 +188,18 @@
         ]
     },
     {
-        "id": 18,
+        "id": 19,
         "titulo": "100% whey de Puro Campeon 5lbs",
-        "precio": "$840.00",
+        "precio": "840",
         "descripcion": "Después de realizar su pedido, usted ganará 1 punto por compra, el cual puede usar para obtener regalos!",
         "image": [
             "https://www.suplementosmexico.com.mx/715-superlarge_default/100-whey-de-puro-campeon-5lbs.jpg"
         ]
     },
     {
-        "id": 19,
+        "id": 20,
         "titulo": "Myofusion 5lbs Proteina Gaspari Nutrition",
-        "precio": "$1,300.00",
+        "precio": "1300",
         "descripcion": "Después de realizar su pedido, usted ganará 1 punto por compra, el cual puede usar para obtener regalos!",
         "image": [
             "https://www.suplementosmexico.com.mx/105-superlarge_default/myofusion-5lbs-proteina-gaspari-nutrition.jpg",
