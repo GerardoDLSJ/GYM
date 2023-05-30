@@ -8,7 +8,10 @@ function abrirConexión() {
   });
 }
 
-function consultarAdministrador() {}
+function consultarAdministrador(email, password) {
+  abrirConexión();
+  connection;
+}
 
 const consulta = `SELECT * FROM administrador`;
 
