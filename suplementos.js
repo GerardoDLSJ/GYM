@@ -36,7 +36,7 @@ function templateSuplementos(suplementos) {
 
     $clonItemSuplemento.querySelector("#titulo").textContent = titulo;
     $clonItemSuplemento.querySelector("#image").src = imagen;
-    $clonItemSuplemento.querySelector("#price").textContent = precio;
+    $clonItemSuplemento.querySelector("#price").textContent = "$" + precio;
 
     fragment.appendChild($clonItemSuplemento);
   });
