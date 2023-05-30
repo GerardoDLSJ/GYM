@@ -1,5 +1,5 @@
 //Agregar link de api
-const url = "http://localhost:5000/suplementos/";
+const url = "http://127.0.0.1:5000/suplementos/";
 const contenedor = document.querySelector("tbody");
 let resultados = "";
 
@@ -29,10 +29,14 @@ const mostrar = (articulos) => {
     resultados += `
     <tr>
         <td>${articulo.id}</td>
-        <td>${articulo.image}</td>
+        <td><img src="${articulo.image}" style="height: 5rem; display: flex; justify-items: center; align-items: center;" alt="Imagen"></td>
         <td>${articulo.titulo}</td>
+        <td>${articulo.descripcion}</td>
         <td>${articulo.precio}</td>
-        <td class="text-center"><a class="btnEditar btn btn-primary">Editar</a><a class="btnEliminar btn btn-danger">Eliminar</a></td>
+        <td class="text-center">
+          <a class="btnEditar btn btn-primary" onclick="edit('${articulo.id}','${articulo.image}','${articulo.titulo}','${articulo.descripcion}','${articulo.precio}')">Editar</a>
+          <a class="btnEliminar btn btn-danger">Eliminar</a>
+        </td>
     </tr>
     `;
   });
@@ -65,29 +69,28 @@ on(document, "click", ".btnEliminar", (e) => {
       })
         .then((res) => res.json())
         .then(() => location.reload());
-      alertify.success("Eliminado");
+         alertify.success("Eliminado");
     },
     function () {
-      alertify.error("Cencelado");
+        alertify.error("Cencelado");
     }
   );
 });
 
 //Procedimeinto editar
 let idform = 0;
-on(document, "click", ".btnEditar", (e) => {
-  const fila = e.target.parentNode.parentNode;
-  idform = fila.children[0].innerHTML;
-  const URLimgForm = fila.children[1].innerHTML;
-  const nombreForm = fila.children[2].innerHTML;
-  const costoForm = fila.children[3].innerHTML;
-  URLimg.value = URLimgForm;
-  nombre.value = nombreForm;
-  costo.value = costoForm.replace(/[$]/g, "");
+
+function edit(id,img,titulo,des,precio)
+{
+  idform = id;
+  URLimg.value = img;
+  nombre.value = titulo;
+  descripcion.value = des
+  costo.value = precio.replace('$', "");
   opcion = "editar";
 
   modalArticulo.show();
-});
+}
 
 //Procedimiento para crear y editar
 btnGuardar.addEventListener("click", (e) => {
@@ -101,6 +104,7 @@ btnGuardar.addEventListener("click", (e) => {
       body: JSON.stringify({
         URLimg: URLimg.value,
         nombre: nombre.value,
+        descripcion: descripcion.value,
         costo: costo.value,
       }),
     })
@@ -128,3 +132,41 @@ btnGuardar.addEventListener("click", (e) => {
   }
   modalArticulo.hide();
 });
+
+//BUSCADOR
+(function(document){
+  'bucador';
+
+  var LightTableFilter= (function(Arr){
+    var _input;
+
+    function _onInputEvent(e){
+      _input = e.target;
+      var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+      Arr.forEach.call(tables, function(table){
+        Arr.forEach.call(table.tBodies, function(tbody){
+          Arr.forEach.call(tbody.rows, _filter)
+        });
+      });
+    }
+    function _filter(row){
+      var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+    }
+
+    return {
+      init: function(){
+        var inputs = document.getElementsByClassName('light-table-filter');
+        Arr.forEach.call(inputs, function(input){
+          input.oninput = _onInputEvent;
+        });
+      }
+    };
+  })(Array.prototype);
+
+  document.addEventListener('readystatechange', function(){
+    if(document.readyState === 'complete'){
+      LightTableFilter.init();
+    }
+  });
+})(document);

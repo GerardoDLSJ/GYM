@@ -21,7 +21,7 @@ app.get("/suplementos", (req, res) => {
 
 // Buscar suplemento por título Ejemplo /suplemento?titulo=elite
 app.get("/suplemento", (req, res) => {
-  const tituloBuscado = req.query.titulo.toLowerCase(); // Buscasr sin importar si es mayuscula o minuscula
+  const tituloBuscado = req.query.titulo.toLowerCase(); // Buscar sin importar si es mayuscula o minuscula
   const suplementosEncontrados = infoSuplemento.filter((suplemento) =>
     suplemento.titulo.toLowerCase().includes(tituloBuscado)
   );
@@ -128,3 +128,4 @@ app.delete("/suplemento/:id", (req, res) => {
     res.status(404).send("Suplemento no encontrado");
   }
 });
+
