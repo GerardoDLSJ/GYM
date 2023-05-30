@@ -1,5 +1,11 @@
-
-
+:root{
+    --width-page: 1200px;
+    --nav-height: 100px;
+    --color-bg: #0f0f0f;
+    --primary-color: #fff311;
+    --primary-font: 'Anton', sans-serif;
+    --secondary-font: 'Hanken Grotesk', sans-serif;
+}
 
 .menu-izq-list{
     list-style: none;
@@ -18,4 +24,58 @@
 
     color: #f9ef23;
 
+}
+
+.main{
+    margin: 8rem 3rem;
+}
+
+.titulo{
+    width: 100%;
+}
+.titulo h2{
+    font-size: 3.1rem;
+    font-weight: 400; 
+    font-style: italic;
+    color: rgb(74, 190, 238); 
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.grid{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.grid__item{
+    text-align: center;
+    background-color: #3a3b3d;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.suplemento__info h2{
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--primary-font); 
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+.suplemento__info img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.suplemento__info p{
+    color: white;
+    font-family: var(--primary-font); 
+    font-style: italic;
+    font-size: 3rem;
+}
+.grid__item:hover {
+    transform: scale(1.1);
 }
