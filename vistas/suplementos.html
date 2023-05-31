@@ -21,6 +21,8 @@
     <!-- Apunta al directorio css -->
     <link rel="stylesheet" href="../styles/styles.css">   
     <link rel="stylesheet" href="../styles/suplementos.css">   
+    <script src="//unpkg.com/navigo"></script>
+    <script defer src='../suplementos.js' type="module"></script>
 </head>
 <body>
     <header>
@@ -28,14 +30,13 @@
         <nav class="main_nav">
             <div class="div__izquierdo">
                 <a href="index.html">
-                    <!-- <img src="../img/logo.svg"> -->
+                    <img src="../img/logo.svg">
                 </a>
-                <ul class="menu-izq-list">
+                <!-- <ul class="menu-izq-list">
                     <li class="menu-izq-item">
                         <a href="./index.html">Inicio</a>
                     </li>
-
-                </ul>
+                </ul> -->
             </div>
             <div class="div__derecho">
                 <div class="main-nav__search">
@@ -51,5 +52,23 @@
             </div>
         </nav>
     </header>
+
+    <main class="main">
+        <div class="titulo">
+            <h2>Productos<span class="spanSuplemento"></span></h2>
+        </div>
+        <template class="grid">
+            <a class="grid__item" href="">
+                <div class="suplemento__info">
+                    <h2 id="titulo">ISO100</h2>
+                    <img id="image" src="../img/proteina.png" alt="">
+                    <p id="price">$1,400</p>
+                </div>
+            </a>
+        </template>
+        <div class="grid">
+
+        </div>
+    </main>
 </body>
 </html>

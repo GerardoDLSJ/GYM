@@ -7,6 +7,8 @@
     src: url('../fonts/HKGrotesk-Medium.otf') format('truetype');
 }
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -39,6 +41,7 @@ header{
 .main{
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 .parte_izquierda{
@@ -62,15 +65,18 @@ header{
 }
 
 .parte_derecha{
-    margin-top: 8rem;
-    width: 25rem;
-    height: 25rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 .container{
     display: flex;
     flex-direction: column; 
     align-items: center;
+    height: 26rem;
+    width: 25rem;
+    background-color: #0000007b;
+    border-radius: 2rem;
 }
 
 .container > div{
@@ -86,6 +92,7 @@ header{
     color: #f9ef23;
     font-size: 2.5rem;
 }
+
 
 .input_login{
     position: relative;
@@ -104,7 +111,9 @@ input::placeholder {
     border: none;
     outline: none;
     border-bottom: 0.2rem solid #ccc;
+
 }
+
 
 .input_login .bi {
     position: absolute;
@@ -114,6 +123,10 @@ input::placeholder {
     font-family: 'FontAwesome';
     font-size: 1rem;
     color: white;
+}
+
+input{
+    font-family: 'Ubuntu', sans-serif, 'Material Symbols Outlined';
 }
 
 .container div > a{
@@ -136,6 +149,7 @@ input::placeholder {
     background-color: #e81616;
     text-align: center;
     border-radius: 20px;
+    
 }
 
 .botonnIniciarSesion:hover,
@@ -144,4 +158,15 @@ input::placeholder {
   background-color: #e81616eb;
   outline: none;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.alert{
+    text-align: center;
+    background-color: #fc3737;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    border: none;
+    z-index: auto !important;
+    position: static !important;
 }

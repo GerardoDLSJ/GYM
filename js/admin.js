@@ -1,5 +1,5 @@
 //Agregar link de api
-const url = "http://127.0.0.1:5000/suplementos/";
+const url = "http://127.0.0.1:5000/api/suplementos/";
 const contenedor = document.querySelector("tbody");
 let resultados = "";
 
@@ -69,10 +69,10 @@ on(document, "click", ".btnEliminar", (e) => {
       })
         .then((res) => res.json())
         .then(() => location.reload());
-         alertify.success("Eliminado");
+      alertify.success("Eliminado");
     },
     function () {
-        alertify.error("Cencelado");
+      alertify.error("Cencelado");
     }
   );
 });
@@ -80,13 +80,12 @@ on(document, "click", ".btnEliminar", (e) => {
 //Procedimeinto editar
 let idform = 0;
 
-function edit(id,img,titulo,des,precio)
-{
+function edit(id, img, titulo, des, precio) {
   idform = id;
   URLimg.value = img;
   nombre.value = titulo;
-  descripcion.value = des
-  costo.value = precio.replace('$', "");
+  descripcion.value = des;
+  costo.value = precio.replace("$", "");
   opcion = "editar";
 
   modalArticulo.show();
@@ -116,7 +115,7 @@ btnGuardar.addEventListener("click", (e) => {
       });
   }
   if (opcion == "editar") {
-    fetch(`http://127.0.0.1:5000/suplemento/${idform}`, {
+    fetch(`http://127.0.0.1:5000/api/suplemento/${idform}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -134,38 +133,41 @@ btnGuardar.addEventListener("click", (e) => {
 });
 
 //BUSCADOR
-(function(document){
-  'bucador';
+(function (document) {
+  "bucador";
 
-  var LightTableFilter= (function(Arr){
+  var LightTableFilter = (function (Arr) {
     var _input;
 
-    function _onInputEvent(e){
+    function _onInputEvent(e) {
       _input = e.target;
-      var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
-      Arr.forEach.call(tables, function(table){
-        Arr.forEach.call(table.tBodies, function(tbody){
-          Arr.forEach.call(tbody.rows, _filter)
+      var tables = document.getElementsByClassName(
+        _input.getAttribute("data-table")
+      );
+      Arr.forEach.call(tables, function (table) {
+        Arr.forEach.call(table.tBodies, function (tbody) {
+          Arr.forEach.call(tbody.rows, _filter);
         });
       });
     }
-    function _filter(row){
-      var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
-      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+    function _filter(row) {
+      var text = row.textContent.toLowerCase(),
+        val = _input.value.toLowerCase();
+      row.style.display = text.indexOf(val) === -1 ? "none" : "table-row";
     }
 
     return {
-      init: function(){
-        var inputs = document.getElementsByClassName('light-table-filter');
-        Arr.forEach.call(inputs, function(input){
+      init: function () {
+        var inputs = document.getElementsByClassName("light-table-filter");
+        Arr.forEach.call(inputs, function (input) {
           input.oninput = _onInputEvent;
         });
-      }
+      },
     };
   })(Array.prototype);
 
-  document.addEventListener('readystatechange', function(){
-    if(document.readyState === 'complete'){
+  document.addEventListener("readystatechange", function () {
+    if (document.readyState === "complete") {
       LightTableFilter.init();
     }
   });
