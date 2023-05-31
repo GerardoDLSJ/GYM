@@ -32,11 +32,6 @@
                 <a href="index.html">
                     <img src="../img/logo.svg">
                 </a>
-                <!-- <ul class="menu-izq-list">
-                    <li class="menu-izq-item">
-                        <a href="./index.html">Inicio</a>
-                    </li>
-                </ul> -->
             </div>
             <div class="div__derecho">
                 <div class="main-nav__search">
@@ -45,10 +40,6 @@
                       <input type="submit" hidden />
                     </form>
                   </div>
-                    <button class="menu__item button_login">
-                        <a href="login.html">Login</a>
-                    </button>
-                </ul>
             </div>
         </nav>
     </header>
@@ -57,18 +48,43 @@
         <div class="titulo">
             <h2>Productos<span class="spanSuplemento"></span></h2>
         </div>
-        <template class="grid">
-            <a class="grid__item" href="">
-                <div class="suplemento__info">
-                    <h2 id="titulo">ISO100</h2>
-                    <img id="image" src="../img/proteina.png" alt="">
-                    <p id="price">$1,400</p>
-                </div>
-            </a>
-        </template>
-        <div class="grid">
-
+        <div class="contenedor_productos">
+            <template  class="grid">
+                <a class="grid__item" href="">
+                    <div class="suplemento__info">
+                        <h2 id="titulo">ISO100</h2>
+                        <div class="img_producto">
+                            <img  id="image" src="../img/proteina.png" alt="">
+                        </div>
+                        <p id="price">$1,400</p>
+                         <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="display: flex; justify-items: left;">
+                            Ver mas...
+                        </button>
+                    </div>
+                </a>
+            </template>
         </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     </main>
 </body>
 </html>
