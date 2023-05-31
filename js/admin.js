@@ -26,6 +26,7 @@ btnCrear.addEventListener("click", () => {
 //Funcion para mostrar los resultados
 const mostrar = (articulos) => {
   articulos.forEach((articulo) => {
+    console.log(articulo.image);
     resultados += `
     <tr>
         <td>${articulo.id}</td>
@@ -64,15 +65,21 @@ on(document, "click", ".btnEliminar", (e) => {
   alertify.confirm(
     "¿Estas seguro que quieres eliminar el producto?",
     function () {
-      fetch(url + id, {
+      fetch(`http://localhost:5000/api/suplemento/${id}`, {
         method: "DELETE",
       })
-        .then((res) => res.json())
-        .then(() => location.reload());
-      alertify.success("Eliminado");
+        .then((res) => res.status)
+        .then((status) => {
+          if (status == 200) {
+            alertify.success("Eliminado");
+            location.reload();
+          } else {
+            alertify.error("No se realizó la operación");
+          }
+        });
     },
     function () {
-      alertify.error("Cencelado");
+      alertify.error("Cancelado");
     }
   );
 });
@@ -95,24 +102,18 @@ function edit(id, img, titulo, des, precio) {
 btnGuardar.addEventListener("click", (e) => {
   e.preventDefault();
   if (opcion == "crear") {
-    fetch(url, {
+    fetch("http://localhost:5000/api/suplemento", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        URLimg: URLimg.value,
-        nombre: nombre.value,
+        image: URLimg.value,
+        titulo: nombre.value,
         descripcion: descripcion.value,
-        costo: costo.value,
+        precio: costo.value,
       }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        const nuevoArticulo = [];
-        nuevoArticulo.push(data);
-        mostrar(nuevoArticulo);
-      });
+    }).then(window.location.reload());
   }
   if (opcion == "editar") {
     fetch(`http://127.0.0.1:5000/api/suplemento/${idform}`, {

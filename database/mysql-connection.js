@@ -1,13 +1,18 @@
 const mysql = require("mysql2");
+require("dotenv").config();
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "sgbdgera",
-  database: "GYMWEB",
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
+function nuevaConexion() {
+  return (connection = mysql.createConnection({
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  }));
+}
 
-module.exports = connection;
+module.exports = {
+  nuevaConexion,
+};
