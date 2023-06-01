@@ -29,7 +29,7 @@ Para probar la aplicación web correctamente es necesarió crear la base de dato
 Mediante estos pasos ya se puede utilizar la aplicación web de manera local.
 
 ---
-## Desarolladores
+## Desarrolladores
 
 <h2 style="font-weight: 500">JOSE LENNING AGUILAR RUVALCABA</h2>
 
