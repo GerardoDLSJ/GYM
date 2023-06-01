@@ -27,6 +27,7 @@ Para probar la aplicación web correctamente es necesarió crear la base de dato
 4. Iniciar index.html mediante la extensión <span style="color: #B93BF4;">Live Server</span>
 
 Mediante estos pasos ya se puede utilizar la aplicación web de manera local.
+
 ---
 ## Desarolladores
 
