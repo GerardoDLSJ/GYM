@@ -19,7 +19,7 @@ Para probar la aplicación web correctamente es necesarió crear la base de dato
    ```
 2. Modificar el archivo `.env` con las variables de entorno correspondientes
 
-3. Iniciar la terminal y dirigirse Ejecutar el comando
+3. Iniciar la terminal y dirigirse a la carpeta del proyecto. Para iniciar el servidor express ejecutar el comando
    ```
    nodemon app
    ```
