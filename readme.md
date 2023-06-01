@@ -6,8 +6,6 @@
 
 ## Requerimientos
 
----
-
 Para probar la aplicación web correctamente es necesarió crear la base de datos mysql. En el siguiente link se puede encontrar el script de la bd: <a href="https://gist.github.com/GerardoDLSJ/10af878a32e754b4dd4ee69e4b9a9358" style="color:yellow;">Query GYMWEB</a>
 
 ---
