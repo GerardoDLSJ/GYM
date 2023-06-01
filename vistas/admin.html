@@ -28,7 +28,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    
     <!-- ESTILOS DE PAGINA -->
     <link rel="stylesheet" href="../assets/styles/admin-styles.css" />
     <link
@@ -42,9 +41,7 @@
     <div class="pagina">
         <header class="header">
           <div class="nombre-sitio">
-            <h1 class="escritorio">GYM</h1>
-            <!-- <img src="../img/logo-cropped.svg"> -->
-            <h1 class="movil">GYM</h1>
+            <img src="../assets/img/logo.png" style="height: 3rem;">
           </div>  
           <div class="barra">
               <aside class="sidebar">
@@ -69,22 +66,24 @@
                 </div>
               </div>
               <!-- EN ES LA TABLE DE PRODUCTOS -->
-              <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+              <div class="container mt-2 shadow-lg p-2  bg-body rounded">
                 <button id="btnCrear" type="button" class="btn btn-success">Añadir</button>
-                <table id="tablaArticulos" class="table mt-2 table-bordered table-striped table_id">
-                  <thead>
-                    <tr class="text-center">
-                      <th>N°</th>
-                      <th>IMAGEN</th>
-                      <th>NOMBRE</th>
-                      <th>DESCRIPCION</th>
-                      <th>COSTO</th>
-                      <th>ACCION</th>
-                    </tr>
-                  </thead>
-                  <Tbody>
-                  </Tbody>
-                </table>
+                <div class="contenedor_2">
+                  <table id="tablaArticulos" class="table mt-2 table-bordered table-striped table_id">
+                    <thead>
+                      <tr class="text-center">
+                        <th>N°</th>
+                        <th>IMAGEN</th>
+                        <th>NOMBRE</th>
+                        <th>DESCRIPCION</th>
+                        <th>COSTO</th>
+                        <th>ACCION</th>
+                      </tr>
+                    </thead>
+                    <Tbody>
+                    </Tbody>
+                  </table>
+                </div>
               </div>
 
               <div id="modalArticulo" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

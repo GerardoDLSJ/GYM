@@ -65,9 +65,8 @@
 
 .img_producto{
     background-color:white;
-    height: 20rem;
+    height: 15rem;
 }
-
 
 .contenedor_productos{
     max-height: 71vh;
@@ -76,3 +75,47 @@
 .contenedor_productos::-webkit-scrollbar{
     background-color: transparent;
 }
+
+   /* MODAL AÑADIR*/
+.title-estilo{
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family: 'Anton',sans-serif;
+    color:  #f9ef23;
+}
+   
+.estilo{
+    background-color: white;
+    color: black;
+}
+
+.modal-footer{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+.mostrar_precio{
+    margin-top: 1rem;
+    font-weight: 800;
+    color: rgb(44, 0, 146);
+}
+
+  .contenedor_mostrar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mostrar_imagen {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    margin-right: 1rem; 
+  }
+  
+  .mostrar_info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mostrar_precio {
+    text-align: center;
+  }
