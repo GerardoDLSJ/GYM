@@ -1,8 +1,8 @@
 const { Router } = require("express");
-const usuarios = require("../usuarios.json");
 const authRouter = Router();
 const { comprobarCredenciales } = require("../database/admin");
-//Endpoint public (No autenticado y no autorizado)
+
+//Endpoint public (No autenticado)
 authRouter.get("/publico", (req, res) => res.send("Endpoint público"));
 
 //Endpoint autenticado

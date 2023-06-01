@@ -1,15 +1,11 @@
 const { Router } = require("express");
-const infoSuplemento = require("../suplementos.json");
 const {
   extraerProductos,
   insertarProducto,
   actualizarProducto,
   eliminarProducto,
 } = require("../database/productos");
-const {
-  procesarRespuesta,
-  manejarRespuesta,
-} = require("../helpers/procesarRespuesta");
+const { manejarRespuesta } = require("../helpers/procesarRespuesta");
 const apiRouter = Router();
 
 apiRouter.get("/", (req, res) => {
