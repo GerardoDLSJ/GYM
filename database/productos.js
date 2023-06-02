@@ -3,11 +3,12 @@ const { nuevaConexion } = require("../database/mysql-connection");
 function extraerProductos(callback) {
   const connection = nuevaConexion();
   let query = "SELECT * FROM PRODUCTOS";
-
   connection.query(query, { rowsAsArray: true }, function (err, result) {
     if (err) {
       console.log(err);
-      throw err;
+      callback([]);
+      connection.end();
+      return;
     }
     if (result.length === 0) {
       callback([]);
@@ -42,7 +43,8 @@ function actualizarProducto(
   connection.query(query, (err, result) => {
     console.log(result);
     if (err) {
-      throw err;
+      connection.end();
+      return;
     }
     if (result.affectedRows <= 0) {
       callback(400);

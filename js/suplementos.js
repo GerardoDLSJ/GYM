@@ -16,8 +16,7 @@ async function renderSuplementos(suplemento) {
   )
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
-      return templateSuplementos(res);
+      return templateSuplementos(res.data);
     });
 
   return $suplementos;

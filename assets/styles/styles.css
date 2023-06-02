@@ -124,13 +124,28 @@ input[type="search"]:focus {
 # Carrusel
 --------------------------------------------------------------*/
 .carrusel{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-width: 100%;
     min-height: 100vh;
     background-image: url('../img/fondo.webp');
     background-attachment: fixed;
     background-size: cover;
     background-position: center top;
+    
 }
+
+.imagen_carrusel{
+    width: 400px;
+    height: 600px;
+    
+}
+
+
+
 /*--------------------------------------------------------------
 # Sobre nosotros
 --------------------------------------------------------------*/

@@ -47,7 +47,7 @@ const mostrar = (articulos) => {
 //Procedimiento  mostrar
 fetch(url)
   .then((response) => response.json())
-  .then((data) => mostrar(data))
+  .then((data) => mostrar(data.data))
   .catch((error) => console.log("error url", error));
 
 const on = (element, event, selector, handler) => {
@@ -128,7 +128,9 @@ btnGuardar.addEventListener("click", (e) => {
         descripcion: descripcion.value,
         image: URLimg.value,
       }),
-    }).then((response) => location.reload());
+    })
+      .then((response) => location.reload())
+      .catch((err) => console.log(err));
   }
   modalArticulo.hide();
 });

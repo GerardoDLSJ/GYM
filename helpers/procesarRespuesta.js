@@ -18,16 +18,6 @@ const manejarRespuesta = (resultado) => {
   });
 };
 
-const encontrarPorId = async () => {
-  try {
-    const procesado = await manejarRespuesta(resultado);
-    const id = parseInt(req.params.id);
-    const suplemento = procesado.find((item) => item.id === id);
-  } catch (error) {
-    throw new error("No encontrado");
-  }
-};
-
 module.exports = {
   procesarRespuesta,
   manejarRespuesta,
