@@ -118,21 +118,23 @@ input[type="search"]:focus {
     background-color: transparent;
   }
 
+body::-webkit-scrollbar {
+    background-color: transparent;
+    border: none;
+}
+
 
 /*--------------------------------------------------------------
 # Carrusel
 --------------------------------------------------------------*/
-.carrusel{
+.carrusel {
     min-width: 100%;
     min-height: 100vh;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.carrusel_movil {
+  }
+  
+  .carrusel_movil {
     width: 400px; /* Ajusta el ancho según tus necesidades */
     overflow: hidden; /* Oculta las imágenes que están fuera del carrusel */
-    position: relative;
   }
   
   .lista-imagenes {
@@ -140,23 +142,53 @@ input[type="search"]:focus {
     list-style: none; /* Elimina los marcadores de lista */
     margin: 0;
     padding: 0;
+    position: fixed;
+    z-index: -1;
     width: 300%; /* Ancho total de las imágenes */
-    animation: desplazar 10s infinite linear; /* Animación para desplazar las imágenes */
+    animation: desplazar 13s infinite linear; /* Animación para desplazar las imágenes */
   }
   
   .lista-imagenes li {
+    display: flex;
+    align-items: center;
+    justify-items: center;
     width: 33.33%; /* Ancho de cada imagen */
   }
   
   .lista-imagenes img {
     width: 100%; /* Ajusta el tamaño de las imágenes al contenedor */
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
   }
   
   @keyframes desplazar {
-    0% { transform: translateX(0); } /* Inicio: posición inicial */
-    100% { transform: translateX(-66.66%); } /* Fin: desplaza hacia la siguiente imagen */
+    0%, 20% { left: 0; } /* Inicio: posición inicial */
+    25%, 45% { left: 0; } /* Muestra la primera imagen durante 5 segundos */
+    50%, 70% { left: -100%; } /* Desplaza hacia la siguiente imagen */
+    75%, 95% { left: -200%; } /* Muestra la segunda imagen durante 5 segundos */
+    99.99% { left: -200%; } /* Evita el salto rápido al final */
+    100% { left: 0; } /* Regreso a la primera imagen sin transición */
   }
+  
+  .imagen-con-texto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-con-texto::after {
+    content: "Trascender";
+    font-size: 9rem;
+    font-family: 'Anton', sans-serif;
+    position: absolute;
+    color: white;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 50%;
+  }
+  
 /*--------------------------------------------------------------
 # Sobre nosotros
 --------------------------------------------------------------*/
@@ -164,6 +196,7 @@ input[type="search"]:focus {
     min-width: 100vh;
     min-height: 100vh;
     display: flex;
+    background-color: #0f0f0f;
 }
 
 .aboutus_informacion{
@@ -223,13 +256,13 @@ input[type="search"]:focus {
 .whatweoffer{
     min-width: 100vh;
     min-height: 100vh;
+    background-color: #0f0f0f;
 }
 
 .whatweoffer-titulos{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .whatweoffer-titulos h2{
@@ -287,7 +320,6 @@ input[type="search"]:focus {
     background-image: url('../img/services-3.jpg');
 }
 
-
 /*--------------------------------------------------------------
 # Horarios
 --------------------------------------------------------------*/
@@ -295,6 +327,7 @@ input[type="search"]:focus {
     min-width: 100vh;
     min-height: 100vh;
     background-image: url(../img/shedules.jpg);
+    background-color: #0f0f0f;
 }
 
 .schedules__titulo{
@@ -336,6 +369,7 @@ input[type="search"]:focus {
 .prices{
     min-width: 100vh;
     min-height: 100vh;
+    background-color: #0f0f0f;
 }
 
 .prices__titulo{
@@ -400,6 +434,7 @@ input[type="search"]:focus {
 .products{
     min-width: 100vh;
     min-height: 100vh;
+    background-color: #0f0f0f;
 }
 
 .products__titulo{
@@ -450,10 +485,6 @@ input[type="search"]:focus {
     background-color: #737373;
     border-radius: 20px;
     text-align: center;
-}
-
-.products__grisclaro img{
-
 }
 
 .products__grisclaro p{
@@ -507,10 +538,10 @@ input[type="search"]:focus {
     color: black;
     font-family: var(--primary-font); 
     font-style: italic;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .contact__bloques p{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: var(--secondary-font);
 }
