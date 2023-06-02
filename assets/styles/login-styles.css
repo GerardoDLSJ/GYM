@@ -27,6 +27,8 @@ header{
     background-color: black;
     display: flex;
     justify-content: center;
+    height: 4rem;
+    box-shadow: 0 2px 20px rgba(131, 130, 130, 0.39);
 }
 
 .main_nav{
@@ -36,6 +38,7 @@ header{
     justify-content: space-between;
     height: var(--nav-height);
     align-items: center;
+    height: 4rem;
 }
 
 .main{
