@@ -3,12 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputContrasena = document.querySelector("#contrasena");
   const btnIngresar = document.querySelector(".botonnIniciarSesion");
   const alerta = document.querySelector(".alert");
+  const formulario = document.querySelector("form");
+
   btnIngresar.addEventListener("click", autenticar);
+  formulario.addEventListener("submit", autenticar);
 
   async function autenticar(e) {
+    e.preventDefault();
     const email = inputCorreo.value;
     const password = inputContrasena.value;
-    e.preventDefault();
     const respuesta = await comprobar(email, password);
 
     if (respuesta !== 200) {

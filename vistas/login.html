@@ -13,6 +13,12 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -25,9 +31,31 @@
     <header>
         <!--Main nav-->
         <nav class="main_nav">
-            <a href="../index.html">
-                <div class="div__izquierdo">
+            <div class="div__izquierdo">
+                    <a href="../index.html">
                     <img src="../assets/img/logo.png" style="height: 3rem;">
+                </div>
+                <div class="div__derecho">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="../index.html">Inicio</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="../index.html#serc_3">Horarios</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="../index.html#serc_4">Costos</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="./dietas.html">Dietas</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="./suplementos.html">Suplementos</a>
+                        </li>
+                        <li class="menu__item button_login">
+                            <a href="./login.html">Login</a>
+                        </li>
+                    </ul>
                 </div>
             </a>
             
@@ -41,30 +69,36 @@
             <p class="mensajeDeBienvenida">
                 ¡Bienvenido al Gimnasio GLC!
             </p>
-            <p class="mensajeDeBienvenida">
-                "EL QUE NADA DEBE NADA TEME"
-                -LALITO 2032
+            <p class="frase">
+                "La mayoría de las personas se dan por vencidas justo antes de que llegue el gran momento, no dejes que esa persona sea usted”
+            </p>
+            <p>
+                - Michael Boyle
             </p>
         </div>
         
         <div class="parte_derecha">    
             <div class="d-none alert alert-danger" role="alert">
-                Usuario o contraseña incorrectos
+                Correo o contraseña incorrectos
              </div>
-            <div class="container">
-                <div class="title">
-                    <p>INICIAR SESIÓN</p>
+
+            <form action="submit" >
+                <div class="container">
+                    <div class="title">
+                        <p>INICIAR SESIÓN</p>
+                    </div>
+                    <div class="input_login">
+                        <input type="email" id="correo" name="correo" placeholder="&#xe158; Correo" required>
+                    </div>
+                    <div class="input_login">
+                        <input type="password" id="contrasena" name="contrasena" placeholder="&#xe73c; Contraseña" required>
+                    </div>
+                    <div class="botonnIniciarSesion">
+                        <a href="./admin.html">Iniciar sesión</a>
+                    </div>
                 </div>
-                <div class="input_login">
-                    <input type="email" id="correo" name="correo" placeholder="&#xe158; Correo" required>
-                </div>
-                <div class="input_login">
-                    <input type="password" id="contrasena" name="contrasena" placeholder="&#xe73c; Contraseña" required>
-                </div>
-                <div class="botonnIniciarSesion">
-                    <a href="./admin.html">Iniciar sesión</a>
-                </div>
-            </div>
+                <input type="submit" hidden />
+            </form>
         </div>
 
     </main>
