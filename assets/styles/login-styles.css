@@ -19,6 +19,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:fixed ;
+    overflow: hidden;
 }
 
 /*--------------------------------------------------------------
@@ -65,21 +66,6 @@ header{
 
 .menu__item a:hover{
     color: #fff311;
-}
-
-.button_login{
-    color: white;
-    background-color: #3468DA;
-    text-align: center;
-    border-radius: 999px;
-}
-
-.button_login:hover,
-.button_login:focus,
-.button_login:active {
-  background-color: #0062cc;
-  outline: none;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .main{

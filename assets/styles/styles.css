@@ -145,7 +145,7 @@ body::-webkit-scrollbar {
     position: fixed;
     z-index: -1;
     width: 300%; /* Ancho total de las imágenes */
-    animation: desplazar 13s infinite linear; /* Animación para desplazar las imágenes */
+    animation: desplazar 10s infinite linear; /* Animación para desplazar las imágenes */
   }
   
   .lista-imagenes li {
@@ -247,8 +247,6 @@ body::-webkit-scrollbar {
 .aboutus_imagenes div img:nth-child(2){
     margin-top: 7.3rem;
 }
-
-
 
 /*--------------------------------------------------------------
 # Lo que ofrecemos
@@ -485,13 +483,6 @@ body::-webkit-scrollbar {
     background-color: #737373;
     border-radius: 20px;
     text-align: center;
-}
-
-.products__grisclaro p{
-    color: #e81616;
-    font-family: var(--primary-font); 
-    font-style: italic;
-    font-size: 4rem;
 }
 
 /*--------------------------------------------------------------
