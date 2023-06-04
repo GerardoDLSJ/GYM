@@ -212,7 +212,7 @@ apiController.agregarNuevoSuplemento = (req, res) => {
 
 apiController.actualizarSuplemento = (req, res) => {
   const id = parseInt(req.params.id);
-  actualizarProducto(req.body, (codigo) => {
+  actualizarProducto(req.body, id, (codigo) => {
     if (codigo !== 200) {
       return res.status(codigo).json(
         respuestaExitosa("fail", {

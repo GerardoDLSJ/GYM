@@ -35,11 +35,12 @@ function insertarProducto({ titulo, precio, image, descripcion }, callback) {
 
 function actualizarProducto(
   { id, titulo, precio, image, descripcion },
+  numid,
   callback
 ) {
   const connection = nuevaConexion();
   let query = `UPDATE productos SET titulo = '${titulo}', precio = ${precio}, image = '["${image}"]',descripcion = '${descripcion}'
-  WHERE id = ${Number(id)}`;
+  WHERE id = ${Number(numid)}`;
   connection.query(query, (err, result) => {
     console.log(result);
     if (err) {
@@ -47,7 +48,7 @@ function actualizarProducto(
       return;
     }
     if (result.affectedRows <= 0) {
-      callback(400);
+      callback(404);
       connection.end();
       return;
     }
