@@ -62,7 +62,7 @@ const on = (element, event, selector, handler) => {
 on(document, "click", ".btnEliminar", (e) => {
   const fila = e.target.parentNode.parentNode;
   const id = fila.firstElementChild.innerHTML;
-  alertify.confirm(
+  alertify.confirm(' CONFIRMACIÓN ',
     "¿Estas seguro que quieres eliminar el producto?",
     function () {
       fetch(`http://localhost:5000/api/suplemento/${id}`, {
