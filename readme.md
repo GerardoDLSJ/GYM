@@ -37,7 +37,7 @@ Mediante estos pasos ya se puede utilizar la aplicación web de manera local.
 
 
 
-<h2 style="font-weight: 500">CESAR ALMARAZ MONTEMENOR</h2>
+<h2 style="font-weight: 500">CESAR GUSTAVO ALMARAZ MONTEMAYOR</h2>
 
 **_Desarrollador FrontEnd y BackEnd_**
 
